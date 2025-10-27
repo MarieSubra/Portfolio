@@ -1,11 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marie SUBRA</title>
+
+  <style>
+    /* ================================
+       🎨 PALETTE DE COULEURS CHALEUREUSES
+    ================================= */
+    :root {
+      --rose: #f7b6b2;
+      --orange: #f8a986;
+      --marron: #8b5e3c;
+      --beige: #fff6f0;
+      --texte: #3c2f2f;
+    }
+
+    /* ================================
+       🌿 STYLE GLOBAL DU SITE
+    ================================= */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: var(--beige);
+      color: var(--texte);
+    }
+
+    /* ================================
+       🌸 EN-TÊTE (header)
+       Contient ton nom + barre de navigation
+    ================================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, var(--rose), var(--orange));
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    /* Nom à gauche */
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Liste des onglets à droite */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Liens des onglets */
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    /* Effet hover (au survol de la souris) */
+    nav a:hover {
+      color: var(--marron);
+    }
+
+    /* ================================
+       🏠 SECTION PRINCIPALE : HOME
+       Contient la photo, le texte et les boutons
+    ================================= */
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 3rem 2rem;
+      gap: 0rem;
+      flex-wrap: wrap; /* Permet d’adapter l’affichage sur mobile */
+    }
+
+    /* Bloc gauche (photo + sous-titre) */
+    .left {
+      text-align: center;
+    }
+
+    /* Cercle contenant la photo */
+    .photo-container {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid var(--orange);
+        margin: 0 auto 1rem auto;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Ajustement de l’image dans le cercle */
+    .photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Nom sous la photo */
+    .name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--texte); /* même couleur que le texte principal */
+        margin-top: 1rem;
+    }
+    /* Texte sous la photo */
+    .subtitle {
+      font-weight: 500;
+      color: var(--texte);
+    }
+
+    /* Lien ENSEEIHT */
+    .subtitle a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .subtitle a:hover {
+      text-decoration: underline;
+    }
+
+    /* Bloc droit (texte principal) */
+    .right {
+      max-width: 500px;
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Conteneur des boutons */
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Boutons stylés */
+    .btn {
+      background-color: var(--orange);
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--marron);
+    }
+
+    /* ================================
+       📱 RESPONSIVE DESIGN
+       Ajustement sur petits écrans
+    ================================= */
+    @media (max-width: 768px) {
+      .home {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .right {
+        max-width: 90%;
+      }
+    }
+
+    /* ================================
+       🔸 PIED DE PAGE
+    ================================= */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--marron);
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Mon e-portfolio </h1>
+
+  <!-- ================================
+       EN-TÊTE : ton nom + navigation
+  ================================= -->
+  <header>
+    <div class="logo">Marie SUBRA</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="engineering.html">Engineering Courses</a></li>
+        <li><a href="mobility.html">International Mobility</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="leadership.html">Civic Engagement & Leadership</a></li>
+        <li><a href="activities.html">Other Activities</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================================
+       SECTION HOME
+  ================================= -->
+  <main>
+    <section class="home">
+      <!-- Partie gauche : photo + sous-titre -->
+      <div class="left">
+        <div class="photo-container">
+          <!-- Remplace "photo_marie.jpg" par le vrai nom de ton image -->
+          <img src="Photo_Marie_CV.jpg" alt="Marie Subra" />
+        </div>
+        <h2 class="name">Marie Subra</h2>
+        <p class="subtitle">
+          Engineering student in Digital Science at 
+          <a href="https://www.enseeiht.fr/fr/index.html" target="_blank">ENSEEIHT</a>
+        </p>
+      </div>
+
+      <!-- Partie droite : présentation + boutons -->
+      <div class="right">
+        <p>
+          Hello,<br><br>
+          I am Marie. After following undergraduate courses to prepare nationwide competitive exams in science, 
+          I am now an engineering student at ENSEEIHT, a top-ranking graduate school based in Toulouse. 
+          Initially interested in mathematics and then computer science, I am now studying the exciting and 
+          innovative digital sciences sector. This e-portfolio aims to provide you with a comprehensive overview 
+          of my current skills and professional objectives.
+        </p>
+        <div class="buttons">
+          <!-- Boutons vers les fichiers PDF -->
+          <a href="CV_FR_Marie_SUBRA.pdf" class="btn">CV in French</a>
+          <a href="cv_english.pdf" class="btn">CV in English</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================
+       PIED DE PAGE
+  ================================= -->
+  <footer>
+    © 2025 Marie SUBRA — All rights reserved.
+  </footer>
+
 </body>
 </html>
