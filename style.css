@@ -180,10 +180,11 @@
     }
 
     .btn:hover {
-      background-color: var(--marron);
+      background-color: #f8b37a; /* un peu plus clair au survol */
       transform: translateY(-3px); /* ✅ petit effet de "soulèvement" */
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
+       /* transform: scale(1.05);*/
 
 
     /* ================================
@@ -191,18 +192,30 @@
     ================================ */
 
     .education, .zeerpot {
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05); /* ombre subtile */
+        /*box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05); /* ombre subtile */
         padding: 2rem 3rem;
-        /*background: linear-gradient(135deg, rgba(250, 240, 236, 0.95), rgba(245, 228, 221, 0.95));*/
-        background: rgba(247, 229, 217, 0.95); 
+        /*background: rgba(247, 229, 217, 0.95); */
         border-radius: 50px;
-        margin-bottom: 2rem; /* espace avec la section suivante */
+        margin-bottom: 1rem; /* espace avec la section suivante */
 
     }
-
+    .card {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* cadre léger */
+        padding: 1.5rem 2rem;
+        background: rgba(247, 229, 217, 0.95);
+        border-radius: 30px;
+        margin-bottom: 2rem;
+        flex: 1;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
     .education h2, .zeerpot h2 {
         font-family: "Playfair Display", serif;
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: var(--orange);
         margin-bottom: 2rem;
     }
@@ -246,7 +259,7 @@
     }
     .zeerpot p:first-of-type {
         max-width: 100%;
-        text-align: justify;
+        text-align: center;
         margin-bottom: 1.5rem;
     }
 
@@ -258,21 +271,10 @@
         text-align: center;     /* centre le texte multi-lignes */
     }
     .zeer-text {
-        flex: 2; /* prend deux tiers de l’espace restant */
+        flex: 3; /* prend deux tiers de l’espace restant */
         text-align: justify;
      }
 
-    /*.zeer-text a {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: var(--orange);
-        color: white;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-        margin-top: 0.5rem;
-    }*/
     .zeer-text a {
         display: inline-block;          /* pour pouvoir ajouter padding et margin */
         padding: 0.3rem 0.8rem;         /* réduit la taille du bouton */
@@ -298,7 +300,8 @@
         border-radius: 15px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
-        margin-bottom: 0.5rem; /* espace entre image et texte */
+        margin : 2rem;
+        margin-bottom: 2rem; /* espace entre image et texte */
     }
 
     .zeer-image img:hover {
@@ -359,6 +362,70 @@
         margin-top: 0.5rem;
         padding-left: 1.5rem;
         line-height: 1.6;
+    }
+
+
+    /* ======= OTHER ACTIVITIES ======= */
+    .activities {
+        padding: 4rem 6rem;
+        text-align: center;
+    }
+
+    .activities h1 {
+        color: var(--orange);
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .activities-container {
+      display: flex;
+      justify-content: space-around; /* espace équilibré entre les 3 cartes */
+      align-items: stretch;
+      flex-wrap: nowrap; /* ❌ empêche le retour à la ligne */
+      gap: 2rem;
+      margin: 0 auto;
+      max-width: 1200px; /* garde une belle mise en page centrée */
+    }
+    .activity-card {
+        flex: 1;
+        max-width: 350px; /* limite la largeur pour que tout rentre sur la ligne */
+        background: rgba(247, 229, 217, 0.95);
+        border-radius: 30px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+
+    .activity-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .activity-card h2 {
+        color: var(--marron);
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .activity-card p {
+        color: #4a3b36;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .activity-logo {
+        width: 80px;               /* taille du logo */
+        height: 80px;
+        object-fit: contain;       /* garde les proportions */
+        margin-bottom: 1rem;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)); /* petit relief */
+        transition: transform 0.3s ease;
+    }
+
+    .activity-logo:hover {
+        transform: scale(1.1);     /* léger zoom au survol */
     }
 
 
@@ -426,9 +493,108 @@
     .zeer-image, .zeer-text {
         flex: 1 1 100%;
     }
- }
+    
+    .activities-container {
+        flex-wrap: wrap; /* repasse en colonne sur petits écrans */
+    }
 
+    .activity-card {
+        max-width: 100%;
+    }
+  }
 
+    /* ======= CAREER PAGE ======= */
+    .career {
+        padding: 4rem 6rem;
+        text-align: center;
+    }
+
+    .career-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .career-buttons .btn {
+        padding: 0.6rem 1.2rem;
+        background-color: var(--orange);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .career-buttons .btn:hover {
+        background-color: #f8b37a; /* un peu plus clair au survol */
+        transform: scale(1.05);
+    }
+
+    /* Cadres pour les sections */
+    .career-section {
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+
+    .career-section.card {
+        background: rgba(247, 229, 217, 0.95);
+        padding: 1.5rem 2rem;
+        border-radius: 30px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .career-section h2 {
+        color: var(--orange);
+        font-family: "Playfair Display", serif;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+    }
+
+    /* Bouton LinkedIn externe (outline) */
+    .career-buttons .btn.btn-outline {
+        background-color: transparent;  /* fond transparent */
+        color: var(--orange);           /* texte orange */
+        border: 2px solid var(--orange); /* contour orange */
+        font-weight: bold;
+        transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    .career-buttons .btn.btn-outline:hover {
+        background-color: var(--orange); /* fond orange au survol */
+        color: white; /* texte blanc au survol */
+        transform: scale(1.05);
+    }
+ /* Stage individuel dans Career */
+    .internship-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap; /* pour responsive sur petit écran */
+    }
+
+    .internship-logo img {
+        width: 150px;
+        height: 5rem;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .internship-text {
+        flex: 1;
+        text-align: justify;
+    }
+
+    .internship-text h3 {
+        color: var(--orange);
+        margin-bottom: 0.5rem;
+    }
+
+    .internship-text p {
+        margin-bottom: 0.8rem;
+    }
     /* ================================
        🔸 PIED DE PAGE
     ================================= */
