@@ -1,0 +1,440 @@
+
+    /* ================================
+       🎨 PALETTE DE COULEURS CHALEUREUSES
+    ================================= */
+    :root {
+      --rose: #f7b6b2;
+      --orange: #f8a986;
+      --marron: #8b5e3c;
+      --beige: #fff6f0;
+      --texte: #292424;
+    }
+
+    /* ================================
+       🌿 STYLE GLOBAL DU SITE
+    ================================= */
+    body {
+      margin: 0;
+      font-family: "Nunito", sans-serif; /*"Quicksand"*/
+      background-color: var(--beige);
+      color: var(--texte);
+      padding-left: 1rem;   /* réduit l’espace à gauche */
+      padding-right: 1rem;  /* réduit l’espace à droite */
+    }
+
+    /* ================================
+       🌸 EN-TÊTE (header)
+       Contient ton nom + barre de navigation
+    ================================= */
+    /*header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, var(--rose), var(--orange));
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }*/
+    header {
+      background-color: var(--beige); /* même fond que la page */
+      color: var(--texte); /* texte en noir ou presque */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    /* Nom à gauche */
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Liste des onglets à droite */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Liens des onglets */
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: var(--texte);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    /* Effet soulignement fluide au survol */
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0%;
+      height: 2px;
+      background-color: var(--orange);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Effet hover (au survol de la souris) */
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    /* ================================
+       🏠 SECTION PRINCIPALE : HOME
+       Contient la photo, le texte et les boutons
+    ================================= */
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 3rem 2rem;
+      gap: 0rem;
+      flex-wrap: wrap; /* Permet d’adapter l’affichage sur mobile */
+    }
+
+    /* Bloc gauche (photo + sous-titre) */
+    .left {
+      text-align: center;
+    }
+
+    /* Cercle contenant la photo */
+    .photo-container {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid var(--orange);
+        margin: 0 auto 1rem auto;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Ajustement de l’image dans le cercle */
+    .photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Nom sous la photo */
+    .name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--texte); /* même couleur que le texte principal */
+        margin-top: 1rem;
+    }
+    /* Texte sous la photo */
+    .subtitle {
+      font-weight: 500;
+      color: var(--texte);
+    }
+
+    /* Lien ENSEEIHT */
+    .subtitle a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .subtitle a:hover {
+      text-decoration: underline;
+    }
+
+    /* Bloc droit (texte principal) */
+    .right {
+      max-width: 500px;
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Conteneur des boutons */
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Boutons stylés */
+    .btn {
+        background-color: var(--orange);
+        color: white;
+        padding: 0.7rem 1.2rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease; /* ✅ animation douce */
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      background-color: var(--marron);
+      transform: translateY(-3px); /* ✅ petit effet de "soulèvement" */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* ================================
+    🎓 PAGE - ENGINEERING COURSES
+    ================================ */
+
+    .education, .zeerpot {
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05); /* ombre subtile */
+        padding: 2rem 3rem;
+        /*background: linear-gradient(135deg, rgba(250, 240, 236, 0.95), rgba(245, 228, 221, 0.95));*/
+        background: rgba(247, 229, 217, 0.95); 
+        border-radius: 50px;
+        margin-bottom: 2rem; /* espace avec la section suivante */
+
+    }
+
+    .education h2, .zeerpot h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        color: var(--orange);
+        margin-bottom: 2rem;
+    }
+
+    .education .intro {
+        max-width: 100%;
+        margin-bottom: 2rem;
+        text-align: justify;
+    }
+
+    .semesters {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .semester {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .semester h3 {
+        color: var(--orange);
+        margin-bottom: 0.5rem;
+    }
+
+    .semester ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        line-height: 1.6;
+    }
+
+    /* Zeer pot section */
+    .zeer-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    .zeerpot p:first-of-type {
+        max-width: 100%;
+        text-align: justify;
+        margin-bottom: 1.5rem;
+    }
+
+    .zeer-image {
+        flex: 1;
+        display: flex;
+        flex-direction: column; /* empile image + texte verticalement */
+        align-items: center;    /* centre horizontalement image + texte */
+        text-align: center;     /* centre le texte multi-lignes */
+    }
+    .zeer-text {
+        flex: 2; /* prend deux tiers de l’espace restant */
+        text-align: justify;
+     }
+
+    /*.zeer-text a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: var(--orange);
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+        margin-top: 0.5rem;
+    }*/
+    .zeer-text a {
+        display: inline-block;          /* pour pouvoir ajouter padding et margin */
+        padding: 0.3rem 0.8rem;         /* réduit la taille du bouton */
+        background-color: var(--orange);
+        color: white;
+        border-radius: 8px;
+        font-size: 0.9rem;              /* texte un peu plus petit */
+        font-weight: bold;
+        text-decoration: none;
+        margin-top: 1rem;
+        margin-left: auto;               /* pousse le bouton vers la droite */
+        transition: 0.3s;
+    }
+
+    .zeer-text a:hover {
+        background-color: #f8b37a; /* un orange légèrement plus clair au survol */
+        transform: scale(1.05);
+    }
+
+    .zeer-image img {
+        width: 100%;
+        max-width: 150px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        margin-bottom: 0.5rem; /* espace entre image et texte */
+    }
+
+    .zeer-image img:hover {
+        transform: scale(1.05);
+    }
+    .zeer-video {
+        flex: 1;
+    }
+
+    .zeer-video .btn {
+        display: inline-block;
+        margin-top: 1rem;
+    }
+    .zeerpot-container {
+        display: flex;
+        flex-wrap: wrap; /* pour que ça reste responsive */
+        gap: 2rem;       /* espace entre image, barre et texte */
+        align-items: flex-start;
+    }
+
+    .zeer-image p {
+        margin: 0.5rem 0 0 0;  /* espace entre image et texte, supprime marge par défaut */
+        text-align: center;
+        color: var(--marron);
+    }
+
+    .zeer-text p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    .semesters.two-columns {
+        display: flex;
+        gap: 2rem; /* espace entre les colonnes */
+    }
+
+    .semester {
+        flex: 1; /* chaque semestre prend la moitié de la largeur */
+        position: relative;
+        padding-left: 20px; /* espace pour la ligne */
+    }
+
+    .semester .line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background-color: var(--orange);
+    }
+
+    .semester-content h3 {
+        margin-top: 0;
+        color: var(--orange);
+    }
+
+    .semester-content ul {
+        margin-top: 0.5rem;
+        padding-left: 1.5rem;
+        line-height: 1.6;
+    }
+
+
+
+    /* ================================
+      📱 RESPONSIVE DESIGN AMÉLIORÉ
+    ================================ */
+    @media (max-width: 900px) {
+    /* Les deux blocs passent en colonne */
+    .home {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+
+    /* Photo centrée + taille ajustée */
+    .photo-container {
+      width: clamp(130px, 35vw, 200px);
+      height: clamp(130px, 35vw, 200px);
+    }
+
+    /* Nom et sous-titre centrés sur mobile */
+    .left {
+      text-align: center;
+    }
+
+    /* Texte plus lisible sur petit écran */
+    .right {
+      max-width: 95%;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    .semesters {
+        flex-direction: column;
+    }
+
+    .zeer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .zeer-video {
+        text-align: center;
+    }
+ 
+
+    .semesters.two-columns {
+        flex-direction: column;
+    }
+
+    .semester {
+        padding-left: 15px;
+    }
+
+      .zeerpot-container {
+        flex-direction: column;
+    }
+
+    .divider {
+        display: none; /* on supprime la barre verticale sur mobile */
+    }
+
+    .zeer-image, .zeer-text {
+        flex: 1 1 100%;
+    }
+ }
+
+
+    /* ================================
+       🔸 PIED DE PAGE
+    ================================= */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--marron);
+      font-size: 0.9rem;
+    }
