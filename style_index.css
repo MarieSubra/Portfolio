@@ -65,29 +65,4 @@
       line-height: 1.6;
       text-align: justify;
     }
-    /* Conteneur des boutons */
-    .buttons {
-      margin-top: 2rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
 
- 
-       /* Boutons stylés */
-    .btn {
-        background-color: var(--orange);
-        color: white;
-        padding: 0.8rem 1rem;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease; /* ✅ animation douce */
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn:hover {
-      background-color: #f8b37a; /* un peu plus clair au survol */
-      color: white;                    /* texte blanc au survol */
-      transform: scale(1.05);
-    }
