@@ -74,36 +74,4 @@
       flex-wrap: wrap;
     }
 
-    /* Boutons stylés */
-    .btn {
-        background-color: var(--orange);
-        color: white;
-        padding: 0.7rem 1.2rem;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease; /* ✅ animation douce */
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn:hover {
-      background-color: #f8b37a; /* un peu plus clair au survol */
-      color: white;                    /* texte blanc au survol */
-      transform: scale(1.05);
-    }
-    .btn-outline {
-      background-color: transparent;  /* fond transparent */
-      color: var(--orange);           /* texte orange */
-      border: 2px solid var(--orange); /* contour orange */
-      font-weight: 500;
-      border-radius: 30px;
-      padding: 0.7rem 1.2rem;
-      text-decoration: none;
-      transition: transform 0.3s, background-color 0.3s, color 0.3s;
-    }
-
-    .btn-outline:hover {
-      background-color: var(--orange); /* fond orange au survol */
-      color: white;                    /* texte blanc au survol */
-      transform: scale(1.05);
-    }
+ 
