@@ -39,6 +39,9 @@
 .destination-text {
   flex: 1;
   text-align: justify;
+  display: flex;                 /* active le flexbox */
+  flex-direction: column;        /* empile les éléments verticalement */
+  justify-content: space-between;/* pousse le bouton vers le bas */
 }
 
 .destination-text h3 {
@@ -51,4 +54,9 @@
   margin: 0 auto 3rem auto;  /* centre le paragraphe et ajoute de l'espace dessous */
   line-height: 1.6;          /* améliore la lisibilité */
   color: #4a3b36;            /* cohérence avec le texte général */
+}
+
+.site-btn {
+  align-self: flex-end;   /* place le bouton à droite */
+  margin-top: 0rem;       /* petit espace au-dessus */
 }
