@@ -108,5 +108,14 @@
   </div>
 
 </section>
+<script>
+  // Sélectionne les éléments
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav ul');
 
+  // Ajoute un écouteur de clic
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active'); // Ajoute ou retire la classe "active"
+  });
+</script>
 </body>
