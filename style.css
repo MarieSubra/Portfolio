@@ -149,78 +149,90 @@
       transform: scale(1.05);
     }
 
-      /* ================================
-      📱 RESPONSIVE DESIGN AMÉLIORÉ
-    ================================ */
-    @media (max-width: 900px) {
-    /* Les deux blocs passent en colonne */
-    .home {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      padding: 2rem 1rem;
-    }
+/* ======== MEDIA QUERIES POUR MOBILE ======== */
+@media (max-width: 768px) {
 
-    /* Photo centrée + taille ajustée */
-    .photo-container {
-      width: clamp(130px, 35vw, 200px);
-      height: clamp(130px, 35vw, 200px);
-    }
-
-    /* Nom et sous-titre centrés sur mobile */
-    .left {
-      text-align: center;
-    }
-
-    /* Texte plus lisible sur petit écran */
-    .right {
-      max-width: 95%;
-      font-size: 0.95rem;
-      text-align: justify;
-    }
-
-    .semesters {
-        flex-direction: column;
-    }
-
-    .zeer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .zeer-video {
-        text-align: center;
-    }
- 
-
-    .semesters.two-columns {
-        flex-direction: column;
-    }
-
-    .semester {
-        padding-left: 15px;
-    }
-
-      .zeerpot-container {
-        flex-direction: column;
-    }
-
-    .divider {
-        display: none; /* on supprime la barre verticale sur mobile */
-    }
-
-    .zeer-image, .zeer-text {
-        flex: 1 1 100%;
-    }
-    
-    .activities-container {
-        flex-wrap: wrap; /* repasse en colonne sur petits écrans */
-    }
-
-    .activity-card {
-        max-width: 100%;
-    }
+  /* Corps général du site */
+  body, .international-mobility, .career, .activities, .zeerpot, .education {
+      padding: 2rem 1.5rem; /* réduit les marges latérales pour plus de place */
   }
+
+  /* Titres */
+  h1 {
+      font-size: 2rem;
+  }
+  h2 {
+      font-size: 1.8rem;
+  }
+  h3 {
+      font-size: 1.4rem;
+  }
+
+  /* Blocs flex horizontaux -> vertical */
+  .destination-card,
+  .project-card,
+  .internship-card,
+  .zeerpot-container,
+  .semesters,
+  .activities-container {
+      flex-direction: column; /* empile verticalement sur mobile */
+      align-items: center;    /* centre images et texte */
+  }
+
+  /* Images des cartes et projets */
+  .destination-image img,
+  .project-image img,
+  .internship-logo img,
+  .activity-card img,
+  .zeer-image img {
+      width: 80%;       /* images plus larges mais proportionnées */
+      max-width: 200px; /* limite pour ne pas déborder */
+      margin: 0 auto;   /* centre horizontalement */
+  }
+
+  /* Textes */
+  .destination-text,
+  .project-text,
+  .internship-text,
+  .zeer-text,
+  .activity-card p,
+  .education .intro,
+  .zeerpot p,
+  .career-section p {
+      max-width: 100%;   /* texte utilise toute la largeur disponible */
+      margin: 0 auto 1rem auto;
+      text-align: justify; /* justifié pour meilleure lisibilité */
+  }
+
+  /* Boutons */
+  .btn, .btn-outline, .site-btn, .instagram-btn {
+      width: 90%;      /* boutons prennent presque toute la largeur */
+      text-align: center;
+      margin: 1rem auto 0 auto;
+  }
+
+  /* Marges et espaces */
+  .destination-card,
+  .project-card,
+  .internship-card,
+  .zeerpot-container,
+  .activities-container,
+  .semesters {
+      gap: 1.5rem;
+  }
+
+  /* Réduire la taille des cadres */
+  .destination-card,
+  .project-card,
+  .internship-text.card,
+  .career-section.card,
+  .education,
+  .zeerpot {
+      padding: 1rem 1rem;
+      border-radius: 20px;
+  }
+}
+
 
    
     /* ================================
