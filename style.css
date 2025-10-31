@@ -191,7 +191,28 @@
   }
 
 }
+@media (max-width: 900px) {
+  nav ul {
+    display: flex !important;  /* force l’affichage du menu */
+    flex-wrap: wrap;           /* les onglets passent à la ligne si besoin */
+    justify-content: center;   /* centre le tout sur mobile */
+    overflow-x: auto;          /* permet de défiler si vraiment trop large */
+  }
 
+  nav ul li {
+    flex: 0 0 auto;
+    margin: 0.5rem;
+  }
+
+  header {
+    flex-direction: column; /* logo + menu en colonne sur petit écran */
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+}
 
 
 
