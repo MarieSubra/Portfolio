@@ -207,14 +207,6 @@
   }
 }
 
-/* ===== MENU HAMBURGER ===== */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--texte);
-}
-
 
 
 /* Cacher le menu par défaut sur mobile */
@@ -235,9 +227,6 @@
     display: flex;
   }
 
-  .hamburger {
-    display: block;
-  }
 }
 
     /* ================================
