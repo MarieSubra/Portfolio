@@ -160,169 +160,47 @@
       transform: scale(1.05);
     }
 
-/* ======== MEDIA QUERIES POUR MOBILE ======== */
-@media (max-width: 900px) {
+/* ======= GLOBAL RESPONSIVE FOR MOBILE ======= */
+@media (max-width: 768px) {
 
   /* Corps général du site */
-  body, .international-mobility, .career, .activities, .zeerpot, .education {
-      padding: 2rem 1.5rem; /* réduit les marges latérales pour plus de place */
+  body, header, main, section {
+      padding: 1.5rem;
   }
 
   /* Titres */
   h1 {
       font-size: 2rem;
+      text-align: center;
   }
   h2 {
       font-size: 1.8rem;
+      text-align: center;
   }
   h3 {
       font-size: 1.4rem;
   }
 
-  /* Blocs flex horizontaux -> vertical */
-  .destination-card,
-  .project-card,
-  .internship-card,
-  .zeerpot-container,
-  .semesters,
-  .activities-container {
-      flex-direction: column; /* empile verticalement sur mobile */
-      align-items: center;    /* centre images et texte */
-  }
-
-  /* Images des cartes et projets */
-  .destination-image img,
-  .project-image img,
-  .internship-logo img,
-  .activity-card img,
-  .zeer-image img {
-      width: 80%;       /* images plus larges mais proportionnées */
-      max-width: 200px; /* limite pour ne pas déborder */
-      margin: 0 auto;   /* centre horizontalement */
-  }
-
-  /* Textes */
-  .destination-text,
-  .project-text,
-  .internship-text,
-  .zeer-text,
-  .activity-card p,
-  .education .intro,
-  .zeerpot p,
-  .career-section p {
-      max-width: 100%;   /* texte utilise toute la largeur disponible */
-      margin: 0 auto 1rem auto;
-      text-align: justify; /* justifié pour meilleure lisibilité */
-  }
-
-  /* Boutons */
-  .btn, .btn-outline, .site-btn, .instagram-btn {
-      width: 90%;      /* boutons prennent presque toute la largeur */
-      text-align: center;
-      margin: 1rem auto 0 auto;
-  }
-
-  /* Marges et espaces */
-  .destination-card,
-  .project-card,
-  .internship-card,
-  .zeerpot-container,
-  .activities-container,
-  .semesters {
-      gap: 1.5rem;
-  }
-
-  /* Réduire la taille des cadres */
-  .destination-card,
-  .project-card,
-  .internship-text.card,
-  .career-section.card,
-  .education,
-  .zeerpot {
-      padding: 1rem 1rem;
-      border-radius: 20px;
-  }
-
-
-  /* Tous les cadres avec texte */
-  .destination-card,
-  .project-card,
-  .internship-text.card,
-  .career-section.card,
-  .education,
-  .zeerpot {
-      flex-direction: column; /* empile contenu verticalement */
-      align-items: stretch;   /* prend toute la largeur disponible */
-      padding: 1rem 1.5rem;   /* réduit le padding pour utiliser plus de largeur */
-      max-width: 100%;        /* supprime la limitation de largeur */
-  }
-
-  /* Textes à l’intérieur des cadres */
-  .destination-text,
-  .project-text,
-  .internship-text,
-  .zeer-text,
-  .career-section p,
-  .zeerpot p {
-      max-width: 100%;   /* texte prend toute la largeur du cadre */
-      margin: 0 auto 1rem auto;
-      text-align: justify; /* lisibilité optimale */
-  }
-
-  /* Boutons à l’intérieur des cadres */
-  .btn, .btn-outline, .site-btn, .instagram-btn {
-      width: 90%;      /* prennent presque toute la largeur du cadre */
-      margin: 1rem auto 0 auto; /* centré */
-      text-align: center;
-  }
-
-  /* Pour les images dans les cadres */
-  .destination-image img,
-  .project-image img,
-  .internship-logo img,
-  .zeer-image img {
-      width: 80%;       /* occupe plus de place sur mobile */
-      max-width: 200px; /* limite la taille */
-      margin: 0 auto 1rem auto; /* centre l’image */
-  }
-}
-
-/* par défaut sur mobile, cacher les liens */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* bouton hamburger visible sur mobile */
-.menu-toggle {
-  display: block;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-/* quand menu actif */
-.nav-links.active {
-  display: flex;
-
-  /* ======= MOBILE RESPONSIVE ======= */
-
-  /* Tous les cadres principaux */
+  /* ======= FLEX CONTAINERS ======= */
+  /* Empilement vertical pour les blocs flex */
   .destination-card,
   .project-card,
   .internship-card,
   .activity-card,
   .zeerpot,
   .education,
-  .career-section.card {
-      flex-direction: column;    /* empile le contenu */
-      align-items: stretch;      /* texte + images prennent toute la largeur */
-      max-width: 100%;           /* supprime toute limite */
-      padding: 1rem 1.5rem;      /* réduit les marges internes */
+  .career-section.card,
+  .semesters,
+  .zeerpot-container,
+  .activities-container {
+      flex-direction: column;
+      align-items: stretch;  /* texte + images prennent toute la largeur */
+      max-width: 100%;
       margin: 0 auto 1.5rem auto;
+      gap: 1.5rem;
   }
 
-  /* Paragraphes à l’intérieur des cadres */
+  /* Paragraphes dans les cadres */
   .destination-text p,
   .project-text p,
   .internship-text p,
@@ -331,10 +209,10 @@
   .career-section p,
   .zeerpot p,
   .education .intro {
-      max-width: 100%;           /* texte prend toute la largeur du cadre */
-      margin: 0 auto 1rem auto; /* espace en dessous */
-      text-align: justify;       /* alignement propre */
-      line-height: 1.6;          /* lisibilité */
+      max-width: 100%;
+      margin: 0 auto 1rem auto;
+      text-align: justify;
+      line-height: 1.6;
   }
 
   /* Images dans les cadres */
@@ -343,30 +221,85 @@
   .internship-logo img,
   .activity-card img,
   .zeer-image img {
-      width: 90%;               /* plus grandes mais proportionnées */
+      width: 90%;
       max-width: 200px;
-      margin: 0 auto 1rem auto; /* centré */
+      margin: 0 auto 1rem auto;
+      display: block;
   }
 
-  /* Boutons */
+  /* Boutons dans les cadres */
   .btn, .btn-outline, .site-btn, .instagram-btn {
-      width: 90%;               /* boutons prennent presque toute la largeur du cadre */
+      width: 90%;
       text-align: center;
-      margin: 1rem auto 0 auto; /* centré */
+      margin: 1rem auto 0 auto;
   }
 
-  /* Section activités : alignement horizontal -> vertical */
+  /* ======= ACTIVITIES ======= */
   .activities-container {
       flex-direction: column;
       align-items: center;
       gap: 1.5rem;
   }
 
-  /* Semesters Engineering : empilement vertical */
+  /* ======= SEMESTERS (Engineering Courses) ======= */
   .semesters {
       flex-direction: column;
       gap: 1.5rem;
   }
+
+  /* ======= HEADER NAV ======= */
+  header nav ul {
+      display: flex;
+      overflow-x: auto;            /* permet de défiler si trop large */
+      -webkit-overflow-scrolling: touch;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+
+  header nav ul li {
+      flex: 0 0 auto;              /* empêche rétrécissement */
+      margin-right: 1rem;
+  }
+
+  header nav ul::-webkit-scrollbar {
+      display: none;               /* cache la barre de scroll */
+  }
+
+  /* ======= SPECIFIC ELEMENTS ======= */
+  .zeer-image,
+  .destination-image,
+  .project-image,
+  .internship-logo {
+      align-items: center;
+      text-align: center;
+  }
+
+  .zeer-text,
+  .destination-text,
+  .project-text,
+  .internship-text {
+      flex: unset;                 /* prend toute la largeur du cadre */
+  }
+
+  /* Boutons à droite dans les cadres (ex : Taiwan, LinkedIn) */
+  .site-btn,
+  .instagram-btn {
+      align-self: flex-end;
+      margin-top: 1rem;
+  }
+
+  /* Padding et bordures des cadres */
+  .destination-card,
+  .project-card,
+  .internship-text.card,
+  .career-section.card,
+  .education,
+  .zeerpot {
+      padding: 1rem 1.5rem;
+      border-radius: 20px;
+  }
+
 }
 
 
