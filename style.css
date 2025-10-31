@@ -170,7 +170,7 @@
   .zeerpot,
   .education,
   .career-section.card {
-      padding: 1rem 1rem;  /* réduit le padding à gauche/droite */
+      padding: 0rem 0rem;  /* réduit le padding à gauche/droite */
       margin: 0 auto 1rem auto; /* réduit les marges latérales et espace en bas */
       width: 100%;        /* occupe toute la largeur disponible */
       max-width: 100%;    /* supprime les limitations */
@@ -185,14 +185,14 @@
   .career-section p,
   .zeerpot p,
   .education .intro {
-      margin: 0 auto 1rem auto; /* centrage et espace en dessous */
+      margin: 0 auto 0rem auto; /* centrage et espace en dessous */
       max-width: 100%;          /* texte prend toute la largeur */
       text-align: justify;
   }
     .nav-links {
       display: none;             /* cache les liens sur mobile */
       flex-direction: column;
-      gap: 1rem;
+      gap: 0rem;
   }
 
   .menu-toggle {
