@@ -62,7 +62,7 @@
       overflow-x: auto;      /* permet le défilement horizontal si trop large */
       -webkit-overflow-scrolling: touch; /* pour un défilement fluide sur mobile */
     }
-    
+
     header nav ul li {
       flex: 0 0 auto;        /* empêche les onglets de se rétrécir */
       margin-right: 1rem;
@@ -288,6 +288,24 @@
   }
 }
 
+/* par défaut sur mobile, cacher les liens */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* bouton hamburger visible sur mobile */
+.menu-toggle {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* quand menu actif */
+.nav-links.active {
+  display: flex;
+}
 
 
    
