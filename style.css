@@ -59,18 +59,8 @@
       gap: 1.5rem;
       margin: 0;
       padding: 0;
-      overflow-x: auto;      /* permet le défilement horizontal si trop large */
-      -webkit-overflow-scrolling: touch; /* pour un défilement fluide sur mobile */
     }
 
-    header nav ul li {
-      flex: 0 0 auto;        /* empêche les onglets de se rétrécir */
-      margin-right: 1rem;
-    }
-
-    header nav ul::-webkit-scrollbar {
-      display: none; /* cache la barre de défilement */
-    }
 
     /* Liens des onglets */
     nav a {
