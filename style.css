@@ -232,6 +232,51 @@
       border-radius: 20px;
   }
 }
+@media (max-width: 768px) {
+
+  /* Tous les cadres avec texte */
+  .destination-card,
+  .project-card,
+  .internship-text.card,
+  .career-section.card,
+  .education,
+  .zeerpot {
+      flex-direction: column; /* empile contenu verticalement */
+      align-items: stretch;   /* prend toute la largeur disponible */
+      padding: 1rem 1.5rem;   /* réduit le padding pour utiliser plus de largeur */
+      max-width: 100%;        /* supprime la limitation de largeur */
+  }
+
+  /* Textes à l’intérieur des cadres */
+  .destination-text,
+  .project-text,
+  .internship-text,
+  .zeer-text,
+  .career-section p,
+  .zeerpot p {
+      max-width: 100%;   /* texte prend toute la largeur du cadre */
+      margin: 0 auto 1rem auto;
+      text-align: justify; /* lisibilité optimale */
+  }
+
+  /* Boutons à l’intérieur des cadres */
+  .btn, .btn-outline, .site-btn, .instagram-btn {
+      width: 90%;      /* prennent presque toute la largeur du cadre */
+      margin: 1rem auto 0 auto; /* centré */
+      text-align: center;
+  }
+
+  /* Pour les images dans les cadres */
+  .destination-image img,
+  .project-image img,
+  .internship-logo img,
+  .zeer-image img {
+      width: 80%;       /* occupe plus de place sur mobile */
+      max-width: 200px; /* limite la taille */
+      margin: 0 auto 1rem auto; /* centre l’image */
+  }
+}
+
 
 
    
