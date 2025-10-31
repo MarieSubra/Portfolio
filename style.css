@@ -189,22 +189,7 @@
       max-width: 100%;          /* texte prend toute la largeur */
       text-align: justify;
   }
-    .nav-links {
-      display: none;             /* cache les liens sur mobile */
-      flex-direction: column;
-      gap: 0rem;
-  }
 
-  .menu-toggle {
-      display: block;
-      font-size: 2rem;
-      cursor: pointer;
-      color: var(--texte);
-  }
-
-  .nav-links.active {
-      display: flex;             /* affiche les onglets quand hamburger cliqué */
-  }
 }
 
 
