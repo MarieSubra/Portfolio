@@ -29,11 +29,12 @@
         font-size: 1.8rem;
         color: var(--orange);
         margin-bottom: 2rem;
+        margin-top: 3rem;
     }
 
     .education .intro {
         max-width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         text-align: justify;
     }
 
@@ -83,6 +84,10 @@
     }
     .zeer-text {
         flex: 3; /* prend deux tiers de l’espace restant */
+        text-align: justify;
+     }
+
+     .portfolio-text {
         text-align: justify;
      }
 
