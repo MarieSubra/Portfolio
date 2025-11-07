@@ -123,3 +123,18 @@
     .internship-text p {
         margin-bottom: 0.8rem;
     }
+
+    .job-image {
+        display: block;
+        width: 100%;
+        max-width: 400px;   /* limite la taille de la photo */
+        margin: 1rem auto 0 auto; /* centre l’image et espace au-dessus */
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .job-image:hover {
+        transform: scale(1.03); /* petit zoom au survol */
+    }
